@@ -1,0 +1,34 @@
+<div class="container1">
+
+     <h1 id="heading">Welcome to medicare</h1>
+    <div class="containerForm">
+        <h3>please enter the cytokine levels here</h3>
+        <form #form="ngForm" (ngSubmit)="onsubmit(form)">
+            <label for="feild1">feild1:</label>
+            <input type="number" ngModel  name="feild1" id="feild1" #feild1="ngModel">
+            
+            <label for="feild2">feild2:</label>
+            <input type="number" ngModel name="feild2" id="feild2" #feild2="ngModel">
+
+            
+            <label for="feild3">field3:</label>
+            <input type="number" ngModel name="feild3" id="feild3" #feild3="ngModel">
+
+            
+            <label for="feild4">field4:</label>
+            <input type="number" ngModel name="feild4" id="feild4" #feild4="ngModel">
+
+            
+            <label for="feild5">feild5:</label>
+            <input type="number" ngModel name="feild5" id="feild5" #feild5="ngModel">
+
+            <input type="submit">
+        </form>
+        <p>total sum of values:{{ precentage}}
+
+            
+        </p>
+    </div>
+    
+</div>
+
