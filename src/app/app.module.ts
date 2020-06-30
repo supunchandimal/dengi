@@ -7,16 +7,22 @@ import { HomeComponent } from './home/home.component';
 
 import{FormsModule} from '@angular/forms'
 import { from } from 'rxjs';
+import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
+import { AdviceComponentComponent } from './advice-component/advice-component.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    NavigationBarComponent,
+    AdviceComponentComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

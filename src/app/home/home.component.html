@@ -1,26 +1,48 @@
+<app-navigation-bar></app-navigation-bar>
+
 <div class="container1">
 
-     <h1 id="heading">Welcome to medicare</h1>
+  
     <div class="containerForm">
-        <h3>please enter the cytokine levels here</h3>
+        <h5>please enter the cytokine levels here</h5>
         <form #form="ngForm" (ngSubmit)="onsubmit(form)">
-            <label for="feild1">feild1:</label>
-            <input type="number" ngModel  name="feild1" id="feild1" #feild1="ngModel">
+            <div class="form-group row">
+                <label for="feild1" class="col-sm-2 col-form-label">PAF</label>
+                <div class="col-sm-6">
+                  <input type="number"  ngModel name="feild1"  class="form-control" id="feild1" placeholder="feild1" #feild1="ngModel">
+                </div>
+            </div>
             
-            <label for="feild2">feild2:</label>
-            <input type="number" ngModel name="feild2" id="feild2" #feild2="ngModel">
+            <div class="form-group row">
+                <label for="feild2" class="col-sm-2 col-form-label">feild1</label>
+                <div class="col-sm-6">
+                  <input type="number"  ngModel name="feild2"  class="form-control" id="feild2" placeholder="feild2" #feild2="ngModel">
+                </div>
+            </div>
+            
 
-            
-            <label for="feild3">field3:</label>
-            <input type="number" ngModel name="feild3" id="feild3" #feild3="ngModel">
+            <div class="form-group row">
+                <label for="feild3" class="col-sm-2 col-form-label">feild1</label>
+                <div class="col-sm-6">
+                  <input type="number"  ngModel name="feild3"  class="form-control" id="feild3" placeholder="feild3" #feild3="ngModel">
+                </div>
+            </div>
 
-            
-            <label for="feild4">field4:</label>
-            <input type="number" ngModel name="feild4" id="feild4" #feild4="ngModel">
 
+            <div class="form-group row">
+                <label for="feild4" class="col-sm-2 col-form-label">feild1</label>
+                <div class="col-sm-6">
+                  <input type="number"  ngModel name="feild4"  class="form-control" id="feild4" placeholder="feild4" #feild4="ngModel">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="feild5" class="col-sm-2 col-form-label">feild1</label>
+                <div class="col-sm-6">
+                  <input type="number"  ngModel name="feild5"  class="form-control" id="feild5" placeholder="feild5" #feild5="ngModel">
+                </div>
+            </div>
             
-            <label for="feild5">feild5:</label>
-            <input type="number" ngModel name="feild5" id="feild5" #feild5="ngModel">
 
             <input type="submit">
         </form>
