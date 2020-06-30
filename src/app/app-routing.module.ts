@@ -8,7 +8,7 @@ import { AdviceComponentComponent } from './advice-component/advice-component.co
 
 const routes: Routes = [
 
-  {path:'home',component:HomeComponent},
+  {path:'sycotine_prediction',component:HomeComponent},
   {path:'advice-component',component:AdviceComponentComponent}
 ];
 
