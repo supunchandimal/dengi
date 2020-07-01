@@ -9,6 +9,7 @@ import{FormsModule} from '@angular/forms'
 import { from } from 'rxjs';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 import { AdviceComponentComponent } from './advice-component/advice-component.component';
+import { FirstpageComponent } from './firstpage/firstpage.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { AdviceComponentComponent } from './advice-component/advice-component.co
     AppComponent,
     HomeComponent,
     NavigationBarComponent,
-    AdviceComponentComponent
+    AdviceComponentComponent,
+    FirstpageComponent
   ],
   imports: [
     BrowserModule,

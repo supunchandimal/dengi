@@ -9,7 +9,7 @@ export class SipcalculateService {
   incrementlevel:number;
   public calculate (sip:number){
 
-    if(sip<=5){
+    if(sip<=0.5){
       this.incrementlevel = 15;
     }else{
       this.incrementlevel = 5;

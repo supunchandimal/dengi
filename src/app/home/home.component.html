@@ -1,56 +1,66 @@
 <app-navigation-bar></app-navigation-bar>
 
 <div class="container1">
-
+  
+  
+  <h1>please enter the cytokine levels here</h1>
   
     <div class="containerForm">
-        <h5>please enter the cytokine levels here</h5>
+       
         <form #form="ngForm" (ngSubmit)="onsubmit(form)">
-            <div class="form-group row">
+            <div class="form-group row " style="padding-top: 5%;">
                 <label for="feild1" class="col-sm-2 col-form-label">PAF</label>
                 <div class="col-sm-6">
-                  <input type="number"  ngModel name="feild1"  class="form-control" id="feild1" placeholder="feild1" #feild1="ngModel">
+                  <input type="number"  ngModel name="feild1"  class="form-control" id="feild1" placeholder="paf" #feild1="ngModel">
                 </div>
             </div>
             
             <div class="form-group row">
-                <label for="feild2" class="col-sm-2 col-form-label">feild1</label>
+                <label for="feild2" class="col-sm-2 col-form-label">TNF-α</label>
                 <div class="col-sm-6">
-                  <input type="number"  ngModel name="feild2"  class="form-control" id="feild2" placeholder="feild2" #feild2="ngModel">
+                  <input type="number"  ngModel name="feild2"  class="form-control" id="feild2" placeholder="tnf-α" #feild2="ngModel">
                 </div>
             </div>
             
 
             <div class="form-group row">
-                <label for="feild3" class="col-sm-2 col-form-label">feild1</label>
+                <label for="feild3" class="col-sm-2 col-form-label">IL-10</label>
                 <div class="col-sm-6">
-                  <input type="number"  ngModel name="feild3"  class="form-control" id="feild3" placeholder="feild3" #feild3="ngModel">
+                  <input type="number"  ngModel name="feild3"  class="form-control" id="feild3" placeholder="il-10" #feild3="ngModel">
                 </div>
             </div>
 
 
             <div class="form-group row">
-                <label for="feild4" class="col-sm-2 col-form-label">feild1</label>
+                <label for="feild4" class="col-sm-2 col-form-label">IL-1β</label>
                 <div class="col-sm-6">
-                  <input type="number"  ngModel name="feild4"  class="form-control" id="feild4" placeholder="feild4" #feild4="ngModel">
+                  <input type="number"  ngModel name="feild4"  class="form-control" id="feild4" placeholder="il-1β" #feild4="ngModel">
                 </div>
             </div>
 
             <div class="form-group row">
-                <label for="feild5" class="col-sm-2 col-form-label">feild1</label>
+                <label for="feild5" class="col-sm-2 col-form-label">S1P</label>
                 <div class="col-sm-6">
-                  <input type="number"  ngModel name="feild5"  class="form-control" id="feild5" placeholder="feild5" #feild5="ngModel">
+                  <input type="number"  ngModel name="feild5"  class="form-control" id="feild5" placeholder="s1p" #feild5="ngModel">
                 </div>
             </div>
             
 
             <input type="submit">
         </form>
-        <p>total sum of values:{{ precentage}}
+       
+      
+      </div>
 
-            
-        </p>
-    </div>
+      <div class="container w-25" style="" >
+     
+        <p>tnf-α icrement points:{{tnfalphalevel}}</p>
+        <p>PAF increment points:{{pafincrementlevel}}</p>
+        <p>IL -10 increment points :{{il10level}}</p>
+        <p>il-1β increment points :{{ilonebetalevel}}</p>
+        <p>s1p increment points :{{siplevel}}</p>
+      </div>
+
     
 </div>
 
