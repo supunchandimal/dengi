@@ -10,6 +10,8 @@ import { from } from 'rxjs';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 import { AdviceComponentComponent } from './advice-component/advice-component.component';
 import { FirstpageComponent } from './firstpage/firstpage.component';
+import { AboutpredictComponent } from './aboutpredict/aboutpredict.component';
+import { FinddoctorComponent } from './finddoctor/finddoctor.component';
 
 
 @NgModule({
@@ -18,7 +20,9 @@ import { FirstpageComponent } from './firstpage/firstpage.component';
     HomeComponent,
     NavigationBarComponent,
     AdviceComponentComponent,
-    FirstpageComponent
+    FirstpageComponent,
+    AboutpredictComponent,
+    FinddoctorComponent
   ],
   imports: [
     BrowserModule,

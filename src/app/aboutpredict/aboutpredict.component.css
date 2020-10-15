@@ -1,0 +1,43 @@
+.main_aboutpredict{
+    margin-top: 10%;
+}
+.container_1{
+    margin-left: 20%;
+    padding-bottom:2%;
+}
+.container_2{
+    margin-left: 20%;
+    padding-bottom: 2%;
+}
+
+.main2{
+    margin-top: 5%;
+    margin-left: 10%;
+  }
+
+  .main2_con1{
+    margin-left: 10%;
+    float: left;
+    width: 30%;
+  }
+  
+  .main2_con2{
+    float: left;
+    margin-left:12%;
+    width: 35%;
+  }
+.main2_con3{
+  float: left;
+  margin-left: 5%;
+  width: 25%;
+}
+#startpredictbutton{
+    margin-top: 4%;
+    margin-left: 15%;
+    color: black;
+  }
+  #startpredictbutton2{
+    margin-top: 18%;
+    margin-left: 15%;
+    color: black;
+  }

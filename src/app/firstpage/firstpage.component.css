@@ -1,42 +1,51 @@
  /* Container holding the image and the text */
- .container {
-    position: relative;
-    text-align: center;
-    color: white;
+ .main{
+    
+    color: black;
+    margin-top:10%;  
+
+    
+    margin-left: 10%;
+  }
+  .container_2{
+    width: 60%;
+    font-size: large;
+    float: left;
+  }
+  .container_3{
+    width: 30%;
+    float: left;
+  }
+
+  .predictcontent{
+    margin-top:4%;
+  }
+  #startpredictbutton{
+    margin-top: 4%;
+    color: black;
+  }
+
+  .main2{
+    display: block;
+    margin-top: 8%;
+    
+    
+  }
+
+  .main2_con1{
+    margin-left: 10%;
+    float: left;
+    width: 25%;
+    
   }
   
-  /* Bottom left text */
-  .bottom-left {
-    position: absolute;
-    bottom: 8px;
-    left: 16px;
+  .main2_con2{
+    float: left;
+    margin-left:5%;
+    width: 25%;
   }
-  
-  /* Top left text */
-  .top-left {
-    position: absolute;
-    top: 8px;
-    left: 16px;
-  }
-  
-  /* Top right text */
-  .top-right {
-    position: absolute;
-    top: 8px;
-    right: 16px;
-  }
-  
-  /* Bottom right text */
-  .bottom-right {
-    position: absolute;
-    bottom: 8px;
-    right: 16px;
-  }
-  
-  /* Centered text */
-  .centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  } 
+.main2_con3{
+  float: left;
+  margin-left: 5%;
+  width: 25%;
+}
