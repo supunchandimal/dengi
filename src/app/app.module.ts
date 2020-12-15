@@ -5,13 +5,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 
-import{FormsModule} from '@angular/forms'
+import{FormsModule, ReactiveFormsModule} from '@angular/forms'
 import { from } from 'rxjs';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 import { AdviceComponentComponent } from './advice-component/advice-component.component';
 import { FirstpageComponent } from './firstpage/firstpage.component';
 import { AboutpredictComponent } from './aboutpredict/aboutpredict.component';
 import { FinddoctorComponent } from './finddoctor/finddoctor.component';
+import { DiaromsComponent } from './diaroms/diaroms.component';
+import { ChartsModule } from 'ng2-charts';
+import { AboutalgorithmComponent } from './aboutalgorithm/aboutalgorithm.component';
+
+   
 
 
 @NgModule({
@@ -22,12 +27,17 @@ import { FinddoctorComponent } from './finddoctor/finddoctor.component';
     AdviceComponentComponent,
     FirstpageComponent,
     AboutpredictComponent,
-    FinddoctorComponent
+    FinddoctorComponent,
+    DiaromsComponent,
+    AboutalgorithmComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
+    
+    FormsModule,                               // <========== Add this line!
+    ReactiveFormsModule,
+    ChartsModule
     
   ],
   providers: [],

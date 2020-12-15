@@ -5,17 +5,18 @@ import { Injectable } from '@angular/core';
 })
 export class PafcalculateService {
 
+  
   constructor() { }
   increment:number;
   public calculate ( paflevel:number){
     
-    if(paflevel>100||paflevel==100){
-      console.log("greter than 100");
-      this.increment=20;
-    }else if(paflevel<=10){
-      this.increment=0;
+    if(paflevel  <= 10){
+      
+      this.increment=1;
+    }else if(paflevel>10 && paflevel<100){
+      this.increment=(100-paflevel)/90;
     }else{
-      this.increment= (paflevel/90)*20;
+      this.increment=0
     }
     
     return this.increment;

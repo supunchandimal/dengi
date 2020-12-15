@@ -10,10 +10,10 @@ export class SipcalculateService {
   public calculate (sip:number){
 
     if(sip<=0.5){
-      this.incrementlevel = 15;
-    }else{
-      this.incrementlevel = 5;
-    }
+      this.incrementlevel = 1;
+    }else if(sip>0.5 && sip <1.5){
+      this.incrementlevel = sip-0.5;
+    }else this.incrementlevel = 1;
     return this.incrementlevel;
   }
 }

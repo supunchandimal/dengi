@@ -10,13 +10,13 @@ export class TnfAlphacalculateService {
 
   public calculate(tnfalpha:number){
 
-      if(tnfalpha>=30 ){
-        this.incrementlevel = 18;
-        console.log("tnf level >=30")
-      }else if(tnfalpha<=15){
-        this.incrementlevel=0;
+      if(tnfalpha <= 15 ){
+        this.incrementlevel = 1;
+     
+      }else if(tnfalpha>15 && tnfalpha <30){
+        this.incrementlevel=(30-tnfalpha)/15;
       }else{
-        this.incrementlevel =(tnfalpha/15)*18;
+        this.incrementlevel =0;
       }
       return this.incrementlevel;
 

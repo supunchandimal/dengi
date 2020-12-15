@@ -7,7 +7,9 @@ import { AdviceComponentComponent } from './advice-component/advice-component.co
 import { FirstpageComponent } from './firstpage/firstpage.component';
 import { AboutpredictComponent } from './aboutpredict/aboutpredict.component';
 import { FinddoctorComponent } from './finddoctor/finddoctor.component';
-
+import { DiaromsComponent } from './diaroms/diaroms.component';
+import { ChartsModule } from 'ng2-charts';
+import { AboutalgorithmComponent } from './aboutalgorithm/aboutalgorithm.component';
 const routes: Routes = [
 
   {path:'sycotine_prediction',component:HomeComponent},
@@ -18,7 +20,16 @@ const routes: Routes = [
   },
   {
     path:'finddoctor',component:FinddoctorComponent
-  }
+  },
+  {
+    path:'diagrom',component:DiaromsComponent
+  },
+  {
+    path:'aboutalgorithm',component:AboutalgorithmComponent
+  },
+
+  { path: '',   redirectTo: '/home', pathMatch: 'full' }, // redirect to `first-component`
+  //{ path: '**', component: 'home' },  // Wildcard route for a 404 page
 ];
 
 @NgModule({

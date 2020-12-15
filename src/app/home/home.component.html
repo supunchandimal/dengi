@@ -45,19 +45,14 @@
             
 
             <input type="submit">
+            vulnerability level :{{this.vulnerability}}
         </form>
        
       
       </div>
-      <div class=" up" style="display: block;">
-        <div class="firstpart" style="margin-top: 4%; margin-left: 10%; float: left; width: 100%;">
-          <img src="assets/img/severe.jpg" alt="" width="20%" >
-        </div>
-        <div class="secondpart" style="float: left;">
-          lkfsdlkfja
-        </div>
-          
-      </div>
+     <div *ngIf = "isSubmit">
+        <app-diaroms [value]="vulnerability"></app-diaroms>
+     </div>
 
     
 </div>

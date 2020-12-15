@@ -1,0 +1,55 @@
+<div class="maincon">
+        <h3 style="margin-left: 20%;"> Algorithm of the fuzzy decision support system</h3>
+    <div class="container1">
+        
+        INPUT – Input the crisp values (raw patient data) on cytokines S1P, IL-1, TNF-, IL-10 & PAF <br>
+        OUTPUT – Operator value which measure the favorability of attain DHF (As a percentage)
+
+        <br>
+
+    </div>
+    
+    <div class="container2">
+        <h4>Model Process
+        </h4>
+        The membership functions for cytokine levels are as follows <br>
+        <img src="/assets/img/code.PNG" alt="" style="margin-top: 5%;">
+
+
+    </div>
+
+    <div class="container3">
+        Generate the fuzzy membership values for each cytokine using above functions. <br>
+        As the objective of this study is to consider the combined effect from the parameters, Hamacher <br>
+         and OWA operators are selected as suitable fuzzy operators to combine parameters.In the model  <br>
+          the three parameters TNF-α, PAF and IL-10 are subjected to ‘concentration’ as previous studies   <br>
+           clearly indicate that these parameters are significantly elevated in DHF patients than in DF patients. <br>
+        Obtain Hamacher product (H1) of the variables S1P and IL-1β, <br>
+
+        <img src="/assets/img/h1.PNG" alt="" style="margin-top: 3%; margin-bottom: 3%;"> <br>
+
+
+        Where Sx , x are the membership values of S1P and IL-1β obtain from (1) and (2), respectively. <br><br>
+
+        Obtain Hamacher product (H) of the variables TNF-α and IL-10, <br>
+        
+        <img src="/assets/img/h.PNG" alt=""  style="margin-top: 3%; margin-bottom: 3%;"> <br>
+
+
+        Where x , 10x are the membership values of TNF- α and IL-10 obtained from (3) and (4), respectively. <br><br>
+
+        Now we can obtain Hamacher product (H2) of the variable PAF and H, <br>
+
+        <img src="/assets/img/h2.PNG" alt="" style="margin-top: 3%; margin-bottom: 3%;"> <br>
+
+        Where Px is the membership values of the of PAF obtained from (5) <br>
+        The Hamacher operator (H1) value resulting from S1P, IL-1β and the Hamacher operator (H2)  <br> value resulting from TNF-α, IL-10 and PAF is combined through the OWA (Ordered Weighted Aggregation) 
+         <br> operator. So the OWA operator used in the model is,
+        OWA = *MAXIMUMH1,H2+1-*MINIMUMH1,H2 <br>
+        Where  is OWA weight. When =0.4 model performs well. Therefore optimal  is chosen as 0.4  <br> 
+        Output final operator value measuring unfavourability to attain DHF.
+
+
+
+    </div>
+</div>
