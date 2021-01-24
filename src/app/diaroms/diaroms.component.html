@@ -1,15 +1,95 @@
 
-<div style="margin-left: 30%; padding-top: 10px;">
+<div style="margin-left: 10%; padding-top:10px; width: 40%; margin-top: 10%;">
+ 
 
-    <div style="display: block; width: 40%;">
+    <div style="display: block; width: 100%; float: left;">
+      <h3>For the Tnl-aplha level</h3>
         <canvas baseChart 
           [datasets]="barChartData"
-          [labels]="barChartLabels"
+     
           [options]="barChartOptions"
           [plugins]="barChartPlugins"
           [legend]="barChartLegend"
           [chartType]="barChartType">
         </canvas>
       </div>
+     
+   
 
 </div>
+
+
+
+<div style="margin-left: 10%; padding-top: 10px; float: left; width: 40%;">
+  <h3>For the PAF level</h3>
+
+  <div style="display: block; width: 100%; float: left ;  ">
+      <canvas baseChart 
+        [datasets]="barChartDatapaf"
+     
+        [options]="barChartOptions"
+        [plugins]="barChartPlugins"
+        [legend]="barChartLegend"
+        [chartType]="barChartType">
+      </canvas>
+    </div>
+
+</div>
+
+
+
+<div style="margin-left: 10%; padding-top: 30px; float: left; width: 40%;">
+  <h3>For il10 Level</h3>
+
+  <div style="display: block; width: 100%; float: left">
+      <canvas baseChart 
+        [datasets]="barChartDatail10"
+     
+        [options]="barChartOptions"
+        [plugins]="barChartPlugins"
+        [legend]="barChartLegend"
+        [chartType]="barChartType">
+      </canvas>
+    </div>
+
+</div>
+
+
+
+
+
+<div style="margin-left: 10%; padding-top: 30px; float: left; width: 40%;">
+  <h3>For the LIb level</h3>
+  <div style="display: block; width: 100%; float: left">
+      <canvas baseChart 
+        [datasets]="barChartDatailb"
+     
+        [options]="barChartOptions"
+        [plugins]="barChartPlugins"
+        [legend]="barChartLegend"
+        [chartType]="barChartType">
+      </canvas>
+    </div>
+
+</div>
+
+
+
+<div style="margin-left: 30%; padding-top: 50px; float: left; width: 40%; ">
+  
+  <div style="display: block; width: 100%;">
+    <h3>For the Sip level</h3>
+      <canvas baseChart 
+        [datasets]="barChartDatasip"
+     
+        [options]="barChartOptions"
+        [plugins]="barChartPlugins"
+        [legend]="barChartLegend"
+        [chartType]="barChartType">
+      </canvas>
+    </div>
+    
+
+</div>
+
+

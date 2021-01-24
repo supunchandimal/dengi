@@ -10,6 +10,9 @@ import { FinddoctorComponent } from './finddoctor/finddoctor.component';
 import { DiaromsComponent } from './diaroms/diaroms.component';
 import { ChartsModule } from 'ng2-charts';
 import { AboutalgorithmComponent } from './aboutalgorithm/aboutalgorithm.component';
+
+import { BubblechartComponent } from './bubblechart/bubblechart.component';
+
 const routes: Routes = [
 
   {path:'sycotine_prediction',component:HomeComponent},
@@ -27,7 +30,9 @@ const routes: Routes = [
   {
     path:'aboutalgorithm',component:AboutalgorithmComponent
   },
-
+  {
+    path:'bublechart',component:BubblechartComponent
+  },
   { path: '',   redirectTo: '/home', pathMatch: 'full' }, // redirect to `first-component`
   //{ path: '**', component: 'home' },  // Wildcard route for a 404 page
 ];

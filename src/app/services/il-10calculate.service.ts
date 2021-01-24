@@ -12,7 +12,7 @@ export class Il10calculateService {
       if(in10<=20){
         this.incrementlevel =1;
       }else if(in10>20 && in10 <110){
-        this.incrementlevel=(110-in10)/20;
+        this.incrementlevel=(110-in10)/90;
       }else{
         this.incrementlevel = 0;
       }

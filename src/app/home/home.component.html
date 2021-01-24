@@ -1,59 +1,71 @@
-
-
 <div class="container1">
 
-  
-    <div class="container containerForm" style="display: block;">
-       
-        <form #form="ngForm" (ngSubmit)="onsubmit(form)">
-            <div class="form-group row " style="padding-top: 5%;">
-                <label for="feild1" class="col-sm-2 col-form-label">PAF</label>
-                <div class="col-sm-6">
-                  <input type="number"  ngModel name="feild1"  class="form-control" id="feild1" placeholder="paf" #feild1="ngModel">
-                </div>
-            </div>
-            
-            <div class="form-group row">
-                <label for="feild2" class="col-sm-2 col-form-label">TNF-α</label>
-                <div class="col-sm-6">
-                  <input type="number"  ngModel name="feild2"  class="form-control" id="feild2" placeholder="tnf-α" #feild2="ngModel">
-                </div>
-            </div>
-            
 
-            <div class="form-group row">
-                <label for="feild3" class="col-sm-2 col-form-label">IL-10</label>
-                <div class="col-sm-6">
-                  <input type="number"  ngModel name="feild3"  class="form-control" id="feild3" placeholder="il-10" #feild3="ngModel">
-                </div>
-            </div>
+  <div class="container containerForm" style="display: block;" [class.onsubmitform]="isSubmit">
 
-
-            <div class="form-group row">
-                <label for="feild4" class="col-sm-2 col-form-label">IL-1β</label>
-                <div class="col-sm-6">
-                  <input type="number"  ngModel name="feild4"  class="form-control" id="feild4" placeholder="il-1β" #feild4="ngModel">
-                </div>
-            </div>
-
-            <div class="form-group row">
-                <label for="feild5" class="col-sm-2 col-form-label">S1P</label>
-                <div class="col-sm-6">
-                  <input type="number"  ngModel name="feild5"  class="form-control" id="feild5" placeholder="s1p" #feild5="ngModel">
-                </div>
-            </div>
-            
-
-            <input type="submit">
-            vulnerability level :{{this.vulnerability}}
-        </form>
-       
-      
+    <form #form="ngForm" (ngSubmit)="onsubmit(form)">
+      <div class="form-group row " style="padding-top: 5%;">
+        <label for="feild1" class="col-sm-2 col-form-label">PAF</label>
+        <div class="col-sm-6">
+          <input type="number" ngModel name="feild1" class="form-control" id="feild1" placeholder="paf"
+            #feild1="ngModel">
+        </div>
       </div>
-     <div *ngIf = "isSubmit">
-        <app-diaroms [value]="vulnerability"></app-diaroms>
-     </div>
 
-    
+      <div class="form-group row">
+        <label for="feild2" class="col-sm-2 col-form-label">TNF-α</label>
+        <div class="col-sm-6">
+          <input type="number" ngModel name="feild2" class="form-control" id="feild2" placeholder="tnf-α"
+            #feild2="ngModel">
+        </div>
+      </div>
+
+
+      <div class="form-group row">
+        <label for="feild3" class="col-sm-2 col-form-label">IL-10</label>
+        <div class="col-sm-6">
+          <input type="number" ngModel name="feild3" class="form-control" id="feild3" placeholder="il-10"
+            #feild3="ngModel">
+        </div>
+      </div>
+
+
+      <div class="form-group row">
+        <label for="feild4" class="col-sm-2 col-form-label">IL-1β</label>
+        <div class="col-sm-6">
+          <input type="number" ngModel name="feild4" class="form-control" id="feild4" placeholder="il-1β"
+            #feild4="ngModel">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="feild5" class="col-sm-2 col-form-label">S1P</label>
+        <div class="col-sm-6">
+          <input type="number" ngModel name="feild5" class="form-control" id="feild5" placeholder="s1p"
+            #feild5="ngModel">
+        </div>
+      </div>
+
+
+      <input type="submit">
+      vulnerability level :{{this.vulnerability}}
+    </form>
+
+
+  </div>
+  <div *ngIf="isSubmit">
+  <div class="circle" style=" float: right; margin-top: 5% ;margin-right: 25%;" >Hello I am A Circle</div>
+  </div>
+  <div *ngIf="isSubmit">
+    <app-diaroms [valuealpha]="tnfalphalevel" [valuepaf]="pafincrementlevel" [il10]="il10level" [ilb]="ilonebetalevel"
+      [sip]="siplevel"></app-diaroms>
+  </div>
+
+  <div *ngIf="isSubmit">
+    <app-bubblechart [value]="vulnerability"></app-bubblechart>
+  </div>
+
+
+
+
 </div>
-
