@@ -89,14 +89,23 @@ barChartDatasip:ChartDataSets[]=[
     console.log(this.valuealpha.toFixed(1))
     let alphay = this.valuealpha + 0.5
     if(this.valuealpha==1){
-      alphay = 1.5
+      alphay = 12.5
+    }else if(this.valuealpha ==0){
+      alphay = 32.5;
+    }else{
+      alphay = 30-15*this.valuealpha;
     }
-
+    
+    console.log(this.valuealpha)
+    if(isNaN(this.valuealpha)){
+      this.valuealpha = 1;
+      alphay = 12.5;
+    }
    
     this.barChartData =[
       {
         type:'line',
-        data:[{x:0.4,y:0},{x:0.5,y:0},{x:1.5,y:1},{x:1.6,y:1}], 
+        data:[{x:10,y:1},{x:15,y:1},{x:30,y:0},{x:35,y:0}], 
         label: 'your situation',
       //backgroundColor: ["#99ff99", '#FFFF66', "#666600", "yellow", "red"]
     

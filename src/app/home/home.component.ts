@@ -9,6 +9,8 @@ import { IlOnebetacalculateService } from '../services/il-onebetacalculate.servi
 import { SipcalculateService } from '../services/sipcalculate.service';
 
 import * as data from '../../assets/img/data.json';
+import { ThemeService } from 'ng2-charts';
+
 
 @Component({
   selector: 'app-home',
@@ -36,6 +38,10 @@ export class HomeComponent implements OnInit {
   owa:any;
   vulnerability:any;
   isSubmit :boolean =false;
+
+  severbool :any;
+  notseverbool:any;
+  safebool:any;
 
   products:any = (data as any).default;
 
@@ -77,7 +83,35 @@ export class HomeComponent implements OnInit {
     this.h2= this.calculateh2 (this.h, this.pafincrementlevel);
     this.owa= this.calculateowa(this.h1,this.h2);
 
-    this.vulnerability = 100-this.owa*100;
+    this.vulnerability = this.owa*100 ;
+    // if (this.vulnerability <= 100 && this.vulnerability >=0){
+     this.vulnerability= this.vulnerability.toFixed(2);
+     
+    // }else{
+    //   this.vulnerability= 40
+    // }
+
+    if(isNaN(this.vulnerability)){
+      this.vulnerability = 40;
+    }
+     
+
+
+    if(this.vulnerability <=36){
+      this.severbool = true;
+      this.notseverbool =false;
+      this.safebool = false;
+    } else if(this.vulnerability>36 && this.vulnerability <=51){
+      this.notseverbool = true;
+      this.severbool = false;
+      this.safebool = false;
+    }else{
+      this.safebool= true;
+      this.notseverbool = false;
+      this.severbool = false;
+    }
+
+
 
     console.log(this.h1,"H1");
     console.log(this.h2,"H2")
@@ -87,6 +121,7 @@ export class HomeComponent implements OnInit {
 
 
     this.isSubmit = true;
+  
   }
 
   public calculatehH1(x,y){
@@ -124,4 +159,8 @@ export class HomeComponent implements OnInit {
     return owa;
   }
 
+  public ResetForm(form:NgForm){
+    form.reset();
+    this.isSubmit= false;
+  }
 }

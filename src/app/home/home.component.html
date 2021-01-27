@@ -47,22 +47,49 @@
       </div>
 
 
-      <input type="submit">
-      vulnerability level :{{this.vulnerability}}
+      <input type="submit" value="Submit" style="height: 48px;" class="btn btn-primary">
+
+      <button (click)="ResetForm(form)" class="btn btn-primary" type="reset" value="Reset"
+        style="height: 48px; margin-left: 5%; margin-top: 10%;">
+
+        Reset Form
+      </button>
+      <div *ngIf="isSubmit"> Unfavourability of attain DHF :{{this.vulnerability}}%</div>
     </form>
 
 
   </div>
-  <div *ngIf="isSubmit">
-  <div class="circle" style=" float: right; margin-top: 5% ;margin-right: 25%;" >Hello I am A Circle</div>
+  <div *ngIf="isSubmit && severbool ">
+    <h1>you are in severe (DHF) region</h1>
+    <h4 style="float: left; margin-left: 8%;">your level:</h4>
+    <div class="circleforseverbool" style=" float: right; margin-top: 2% ;margin-right: 25%;">{{vulnerability}}%
+
+    </div>
+   
   </div>
+ 
+
+  <div *ngIf="isSubmit && notseverbool ">
+    <h1>your condition may or may not be sever</h1>
+    <h4 style="float: left; margin-left: 5%;">your level:</h4>
+    <div class="circlefornotseverbool" style=" float: right; margin-top: 5% ;margin-right: 25%;">{{vulnerability}}%
+    </div>
+  </div>
+  
+  <div *ngIf="isSubmit && safebool ">
+    <h1>you are in non-severe (DF) region</h1>
+    <h4 style="float: left; margin-left: 8%;">your level:</h4>
+    <div class="circleforsafebool" style=" float: right; margin-top: 5% ;margin-right: 25%;">{{vulnerability}}%
+
+
+    </div>
+  </div>
+  <br>
   <div *ngIf="isSubmit">
+    <h1 style="float:left; margin-left: 20% ; padding-bottom: 40px; color: rgb(0, 102, 255);">The Contribution of each
+      Cytokine to this Result </h1>
     <app-diaroms [valuealpha]="tnfalphalevel" [valuepaf]="pafincrementlevel" [il10]="il10level" [ilb]="ilonebetalevel"
       [sip]="siplevel"></app-diaroms>
-  </div>
-
-  <div *ngIf="isSubmit">
-    <app-bubblechart [value]="vulnerability"></app-bubblechart>
   </div>
 
 

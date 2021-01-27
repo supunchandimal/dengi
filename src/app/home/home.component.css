@@ -1,6 +1,6 @@
 .container1{
   width: 100%;
-  
+    margin-top: 10%;
   }
 
   .container_des{
@@ -39,15 +39,37 @@
     margin-top: 5%;
     text-align: center;
   }
-  .circle {
+  .circleforseverbool {
     width: 200px;
     height: 200px;
     line-height: 200px;
     border-radius: 50%;
-    font-size: 10px;
-    color: #fff;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
     text-align: center;
-    background: #000
+    background:  rgb(226, 108, 78)
+  }
+  .circlefornotseverbool{
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    border-radius: 50%;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    background:  rgb(226, 223, 78)
+  }
+
+  .circleforsafebool{
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    border-radius: 50%;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    background:  rgb(78, 226, 135)
+
   }
   
   
