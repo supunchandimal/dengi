@@ -80,7 +80,18 @@ export class HomeComponent implements OnInit {
 
     this.h1= this.calculatehH1(this.siplevel,this.ilonebetalevel);
     this.h = this.calculateH(this.il10level,this.tnfalphalevel);
+
+   
     this.h2= this.calculateh2 (this.h, this.pafincrementlevel);
+    if(isNaN( this.h)){
+      this.h = 0;
+    }
+    if (isNaN(this.h2)){
+      this.h2=0;
+    }
+    if(isNaN(this.h1)){
+      this.h1 = 0;
+    }
     this.owa= this.calculateowa(this.h1,this.h2);
 
     this.vulnerability = this.owa*100 ;
