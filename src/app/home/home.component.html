@@ -60,24 +60,23 @@
 
   </div>
   <div *ngIf="isSubmit && severbool ">
-    <h1>you are in severe (DHF) region</h1>
+
     <h4 style="float: left; margin-left: 8%;">your level:</h4>
     <div class="circleforseverbool" style=" float: right; margin-top: 2% ;margin-right: 25%;">{{vulnerability}}%
 
     </div>
-   
+
   </div>
- 
 
   <div *ngIf="isSubmit && notseverbool ">
-    <h1>your condition may or may not be sever</h1>
+
     <h4 style="float: left; margin-left: 5%;">your level:</h4>
     <div class="circlefornotseverbool" style=" float: right; margin-top: 5% ;margin-right: 25%;">{{vulnerability}}%
     </div>
   </div>
-  
+
   <div *ngIf="isSubmit && safebool ">
-    <h1>you are in non-severe (DF) region</h1>
+
     <h4 style="float: left; margin-left: 8%;">your level:</h4>
     <div class="circleforsafebool" style=" float: right; margin-top: 5% ;margin-right: 25%;">{{vulnerability}}%
 
@@ -85,6 +84,58 @@
     </div>
   </div>
   <br>
+
+
+  <div *ngIf="isSubmit" style="display: inline; width: 100%; float: left;">
+
+
+    <div class="main col-lg-9 myHalfCol">
+      <div class="row">
+        <div class="col-lg-8">
+          <canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions"
+            [colors]="lineChartColors" [legend]="lineChartLegend" [chartType]="lineChartType"></canvas>
+
+          <div class="row marginclass">
+            <li>If <b> Y between 0%-36%</b>, model indicates that the patient is the sever region(DHF)</li>
+            <li>If <b> Y between 36%-51%</b>, model indicates that the patient is the ambiguity region</li>
+            <li>If <b> Y between 51%-51%</b>, model indicates that the patient is the non-sever region</li>
+
+          </div>
+
+
+        </div>
+
+        <div class="col-lg-4">
+          
+          <div *ngIf="isSubmit && severbool ">
+            <div style="margin-left:10%; font-size:25px; margin-top: 30%;">your in sever region please contact your doctor</div>
+
+
+          </div>
+
+
+
+          <div *ngIf="isSubmit && notseverbool ">
+            <div style="margin-left:10%; font-size:25px; margin-top: 30%;"> your in ambiguity region.your conditon may or may not be
+              Sever, please be safe</div>
+
+          </div>
+
+          <div *ngIf="isSubmit && safebool ">
+
+            <div style="margin-left:40%; font-size:25px; text-align: center; margin-top: 30%;"> you are in non sever region(DF).be safe</div>
+
+          </div>
+
+
+
+
+        </div>
+      </div>
+    </div>
+
+
+  </div>
   <div *ngIf="isSubmit">
     <h1 style="float:left; margin-left: 20% ; padding-bottom: 40px; color: rgb(0, 102, 255);">The Contribution of each
       Cytokine to this Result </h1>

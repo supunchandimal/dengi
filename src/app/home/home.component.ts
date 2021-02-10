@@ -7,7 +7,9 @@ import { TnfAlphacalculateService } from '../services/tnf-alphacalculate.service
 import { Il10calculateService } from '../services/il-10calculate.service';
 import { IlOnebetacalculateService } from '../services/il-onebetacalculate.service';
 import { SipcalculateService } from '../services/sipcalculate.service';
-
+import { ChartDataSets, ChartOptions } from 'chart.js';
+import { BaseChartDirective, Color } from 'ng2-charts';
+import * as annotations from 'chartjs-plugin-annotation';
 import * as data from '../../assets/img/data.json';
 import { ThemeService } from 'ng2-charts';
 
@@ -19,7 +21,7 @@ import { ThemeService } from 'ng2-charts';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor() {  BaseChartDirective.registerPlugin(annotations);}
   precentage ;
   pafservice:PafcalculateService;
   tnfalphaservice :TnfAlphacalculateService;
@@ -37,6 +39,7 @@ export class HomeComponent implements OnInit {
   h:any;
   owa:any;
   vulnerability:any;
+  vulnerability2:any=40;
   isSubmit :boolean =false;
 
   severbool :any;
@@ -44,6 +47,112 @@ export class HomeComponent implements OnInit {
   safebool:any;
 
   products:any = (data as any).default;
+
+
+
+
+
+
+  public lineChartData: ChartDataSets[]=[
+    { data: []}
+  ] ;
+  public lineChartLabels: string[] = ['', 'x', ''];
+  public lineChartOptions= {
+    type: 'line',
+    scales: {
+      xAxes: [{
+        position: 'bottom',
+        gridLines: {
+          zeroLineColor: "rgba(0,255,0,1)"
+        },
+        scaleLabel: {
+          display: true,
+          labelString: ''
+        },
+      }],
+      yAxes: [{
+        position: 'left',
+        gridLines: {
+          zeroLineColor: "rgba(0,255,0,1)"
+        },
+        scaleLabel: {
+          display: true,
+          labelString: 'Unfavourability level'
+        },
+      }]
+    },
+    responsive: true,
+    annotation: {
+      annotations: [
+        {
+          type: 'box',
+          display: true,
+
+          // optional drawTime to control layering, overrides global drawTime setting.
+          drawTime: 'beforeDatasetsDraw',
+          borderDashOffset: 5,
+          
+          borderWidth: 2, 
+          // ID of the Y scale to bind onto, default is 'y'.
+          yScaleID: 'y-axis-0',
+          yMax: 36,
+
+          // Bottom edge of the box.
+          yMin:  0,
+          backgroundColor: 'rgb(245, 27, 27)',
+          
+        },
+        {
+          type: 'box',
+          display: true,
+
+          // optional drawTime to control layering, overrides global drawTime setting.
+          drawTime: 'beforeDatasetsDraw',
+          borderDashOffset: 5,
+          
+          borderWidth: 2, 
+          // ID of the Y scale to bind onto, default is 'y'.
+          yScaleID: 'y-axis-0',
+          yMax:51 ,
+
+          // Bottom edge of the box.
+          yMin:  36,
+          backgroundColor: 'rgb(243, 243, 73)',
+          
+
+          
+        },
+        {
+          type: 'box',
+          display: true,
+
+          // optional drawTime to control layering, overrides global drawTime setting.
+          drawTime: 'beforeDatasetsDraw',
+          borderDashOffset: 5,
+          
+          borderWidth: 2, 
+          // ID of the Y scale to bind onto, default is 'y'.
+          yScaleID: 'y-axis-0',
+          yMax: 100,
+
+          // Bottom edge of the box.
+          yMin:  51,
+          backgroundColor: 'rgb(34, 238, 34)',
+          
+        },
+      ],
+    },
+  };
+  public lineChartColors: Color[] = [
+
+  ];
+  public lineChartLegend = true;
+  public lineChartType = 'line';
+
+
+
+
+
 
   ngOnInit(): void {
       this.products.forEach(element => {
@@ -129,7 +238,24 @@ export class HomeComponent implements OnInit {
     console.log(this.h,"H")
 
     console.log(this.vulnerability ,"vulnerability")
-
+    this.lineChartData = [
+      {
+        type: 'bubble',
+        label: 'Line Dataset',
+        data: [{x:'x', y:this.vulnerability, r: 16 }],
+        backgroundColor: [
+          'black',
+          
+      ],
+      borderColor: [
+          'black'
+      ],
+      borderWidth: 1
+      
+  
+      }
+     
+    ];
 
     this.isSubmit = true;
   

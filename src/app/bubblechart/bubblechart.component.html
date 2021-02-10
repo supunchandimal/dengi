@@ -1,14 +1,32 @@
-<div style="width: 60%; height:60% ; margin-top: 10%">
 
-    <div class="chart-wrapper">
-        <canvas baseChart
-        [datasets]="bubbleChartData"
-        [options]="bubbleChartOptions"
-        [colors]="bubbleChartColors"
-        [legend]="bubbleChartLegend"
-        [chartType]="bubbleChartType">
-      </canvas>
+
+  <div class="main col-lg-9 myHalfCol">
+    <div class="row">
+    <div class="col-lg-8">
+      <canvas baseChart
+      [datasets]="lineChartData"
+      [labels]="lineChartLabels"
+      [options]="lineChartOptions"
+      [colors]="lineChartColors"
+      [legend]="lineChartLegend"
+      [chartType]="lineChartType"
+      ></canvas>
+
+    <div class="row marginclass">
+      <li >If <b> Y between 0%-36%</b>, model indicates that the patient is the sever region(DHF)</li>
+      <li >If <b> Y between 36%-51%</b>, model indicates that the patient is the ambiguity region</li>
+      <li >If <b> Y between 51%-51%</b>, model indicates that the patient is the non-sever region</li>
+     
+    </div>
+    
+
     </div>
 
+    <div class="col-lg-4">
+
+      fdsfafsafeadsfadsfadsfawetaewrqwetwerewrewreqwrwrewrwrwqerweqrewrwerewrwqerw
+
+    </div>
+  </div>
 </div>
 

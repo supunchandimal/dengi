@@ -11,14 +11,7 @@ import { Label } from "ng2-charts";
 
 
 export class DiaromsComponent implements OnChanges {
-  barChartOptions: ChartOptions = {
-    responsive: true,
-    scales:{
-      xAxes:[{
-        type:'linear'
-      }]
-    }
-  };
+  
 
   @Input() valuealpha: any;
   @Input() valuepaf: any;
@@ -33,7 +26,29 @@ export class DiaromsComponent implements OnChanges {
 
   //for the alpha level
   
-
+  barChartOptionsalpha: ChartOptions = {
+    responsive: true,
+    scales:{
+      xAxes:[{
+        type:'linear',
+      //  display: true,
+          scaleLabel: {
+            display: true,
+            labelString: 'input for tnf-alpha level'
+          },
+      }],
+      yAxes: [{
+        position: 'left',
+        gridLines: {
+          zeroLineColor: "rgba(0,255,0,1)"
+        },
+        scaleLabel: {
+          display: true,
+          labelString: 'Unfavourability level'
+        },
+      }]
+    }
+  };
   barChartData: ChartDataSets[] = [
     { data: []}
   ];
@@ -43,7 +58,29 @@ export class DiaromsComponent implements OnChanges {
 
   //for the paf level
 
-
+  barChartOptionspaf: ChartOptions = {
+    responsive: true,
+    scales:{
+      xAxes:[{
+        type:'linear',
+      //  display: true,
+          scaleLabel: {
+            display: true,
+            labelString: 'input for paf level'
+          },
+      }],
+      yAxes: [{
+        position: 'left',
+        gridLines: {
+          zeroLineColor: "rgba(0,255,0,1)"
+        },
+        scaleLabel: {
+          display: true,
+          labelString: 'Unfavourability level'
+        },
+      }]
+    }
+  };
   barChartDatapaf: ChartDataSets[] = [
     { data: []}
   ];
@@ -52,7 +89,29 @@ export class DiaromsComponent implements OnChanges {
   // paf level ends
 
   //il10 level begins
-
+  barChartOptionsil10: ChartOptions = {
+    responsive: true,
+    scales:{
+      xAxes:[{
+        type:'linear',
+      //  display: true,
+          scaleLabel: {
+            display: true,
+            labelString: 'input for il10 level'
+          },
+      }],
+      yAxes: [{
+        position: 'left',
+        gridLines: {
+          zeroLineColor: "rgba(0,255,0,1)"
+        },
+        scaleLabel: {
+          display: true,
+          labelString: 'Unfavourability level'
+        },
+      }]
+    }
+  };
   
   barChartDatail10:ChartDataSets[]=[
     {data:[]}
@@ -61,6 +120,29 @@ export class DiaromsComponent implements OnChanges {
 
 
   //ilb level begins
+  barChartOptionslib: ChartOptions = {
+    responsive: true,
+    scales:{
+      xAxes:[{
+        type:'linear',
+      //  display: true,
+          scaleLabel: {
+            display: true,
+            labelString: 'input for lib level'
+          },
+      }],
+      yAxes: [{
+        position: 'left',
+        gridLines: {
+          zeroLineColor: "rgba(0,255,0,1)"
+        },
+        scaleLabel: {
+          display: true,
+          labelString: 'Unfavourability level'
+        },
+      }]
+    }
+  };
 
   barChartDatailb:ChartDataSets[]=[
     {data:[]}
@@ -69,6 +151,29 @@ export class DiaromsComponent implements OnChanges {
 
 
 //sip level begins 
+barChartOptionssip: ChartOptions = {
+  responsive: true,
+  scales:{
+    xAxes:[{
+      type:'linear',
+    //  display: true,
+        scaleLabel: {
+          display: true,
+          labelString: 'input for sip levelx'
+        },
+    }],
+    yAxes: [{
+      position: 'left',
+      gridLines: {
+        zeroLineColor: "rgba(0,255,0,1)"
+      },
+      scaleLabel: {
+        display: true,
+        labelString: 'Unfavourability level'
+      },
+    }]
+  }
+};
 
 barChartDatasip:ChartDataSets[]=[
   {data:[]}

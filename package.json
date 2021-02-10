@@ -23,6 +23,8 @@
     "@ng-bootstrap/schematics": "^2.0.0-alpha.1",
     "bootstrap": "^4.5.0",
     "chart.js": "^2.9.4",
+    "chartjs-gauge": "^0.2.0",
+    "chartjs-plugin-annotation": "^0.5.7",
     "jquery": "^3.5.1",
     "ng2-charts": "^2.4.2",
     "rxjs": "~6.5.4",
