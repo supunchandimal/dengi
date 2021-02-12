@@ -12,6 +12,7 @@ import { ChartsModule } from 'ng2-charts';
 import { AboutalgorithmComponent } from './aboutalgorithm/aboutalgorithm.component';
 
 import { BubblechartComponent } from './bubblechart/bubblechart.component';
+import { ChangelanComponent } from './changelan/changelan.component';
 
 const routes: Routes = [
 
@@ -33,7 +34,11 @@ const routes: Routes = [
   {
     path:'bublechart',component:BubblechartComponent
   },
-  { path: '',   redirectTo: '/home', pathMatch: 'full' }, // redirect to `first-component`
+  {
+    path:'changelan',component:ChangelanComponent
+  },
+  { path: '',   redirectTo: '/home', pathMatch: 'full' },
+   // redirect to `first-component`
   //{ path: '**', component: 'home' },  // Wildcard route for a 404 page
 ];
 

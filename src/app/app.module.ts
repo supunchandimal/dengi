@@ -16,6 +16,7 @@ import { DiaromsComponent } from './diaroms/diaroms.component';
 import { ChartsModule } from 'ng2-charts';
 import { AboutalgorithmComponent } from './aboutalgorithm/aboutalgorithm.component';
 import { BubblechartComponent } from './bubblechart/bubblechart.component';
+import { ChangelanComponent } from './changelan/changelan.component';
 
    
 
@@ -31,7 +32,8 @@ import { BubblechartComponent } from './bubblechart/bubblechart.component';
     FinddoctorComponent,
     DiaromsComponent,
     AboutalgorithmComponent,
-    BubblechartComponent
+    BubblechartComponent,
+    ChangelanComponent
   ],
   imports: [
     BrowserModule,
