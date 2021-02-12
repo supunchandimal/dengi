@@ -8,7 +8,7 @@
         <label for="feild1" class="col-sm-2 col-form-label">PAF</label>
         <div class="col-sm-6">
           <input type="number" ngModel name="feild1" class="form-control" id="feild1" placeholder="paf"
-            #feild1="ngModel">
+            #feild1="ngModel" maxlength="1000">
         </div>
       </div>
 
@@ -46,6 +46,9 @@
         </div>
       </div>
 
+      <div [hidden]= "haserror" class="alert alert-danger">
+          {{errorform}}
+       </div>  
 
       <input type="submit" value="Submit" style="height: 48px;" class="btn btn-primary">
 
@@ -54,7 +57,7 @@
 
         Reset Form
       </button>
-      <div *ngIf="isSubmit"> Unfavourability of attain DHF :{{this.vulnerability}}%</div>
+     
     </form>
 
 

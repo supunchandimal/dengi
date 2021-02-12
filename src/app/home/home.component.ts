@@ -28,6 +28,8 @@ export class HomeComponent implements OnInit {
   il10service:Il10calculateService;
   ilonebetaservice:IlOnebetacalculateService;
   sipcalculate :SipcalculateService;
+  haserror:boolean= true;
+  errorform:any;
 
   tnfalphalevel :number;
   pafincrementlevel:number;
@@ -166,6 +168,39 @@ export class HomeComponent implements OnInit {
     console.log(form.value.feild2);
     this.precentage=(form.value.feild1 + form.value.feild2+ form.value.feild3 + form.value.feild4 + form.value.feild5);
 
+
+    if( form.value.feild1 < 0 || form.value.feild1> 2000){
+      this.haserror = false;
+      this.errorform = "Paf level should be between 0 -2000"
+      this.isSubmit = false;
+    }
+    else if(form.value.feild2 < 0 || form.value.feild2> 500){
+      this.haserror = false;
+      this.errorform = "Tnf alpha level should be between 0 -500"
+      this.isSubmit = false;
+    
+    }  else if(form.value.feild3 < 0 || form.value.feild3> 1000){
+      this.haserror = false;
+      this.errorform = "il10 level should be between 0 -1000"
+      this.isSubmit = false;
+    
+    }
+    else if(form.value.feild4 < 0 || form.value.feild4> 500){
+      this.haserror = false;
+      this.errorform = "il-B level should be between 0 -500"
+      this.isSubmit = false;
+    
+    }
+    else if(form.value.feild5 < 0 || form.value.feild5> 10){
+      this.haserror = false;
+      this.errorform = "sip level should be between 0 -10"
+      this.isSubmit = false;
+    }
+
+    if(this.haserror){
+      
+      
+
     this.pafservice = new PafcalculateService();
     this.tnfalphaservice = new TnfAlphacalculateService();
     this.il10service = new Il10calculateService();
@@ -258,6 +293,7 @@ export class HomeComponent implements OnInit {
     ];
 
     this.isSubmit = true;
+  }
   
   }
 
