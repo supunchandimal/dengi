@@ -168,33 +168,60 @@ export class HomeComponent implements OnInit {
     console.log(form.value.feild2);
     this.precentage=(form.value.feild1 + form.value.feild2+ form.value.feild3 + form.value.feild4 + form.value.feild5);
 
-
+    let paf:boolean;
+    let alpha:boolean; 
+    let beta:boolean;
+    let sip:boolean;
+    let il10:boolean;
     if( form.value.feild1 < 0 || form.value.feild1> 2000){
       this.haserror = false;
       this.errorform = "Paf level should be between 0 -2000"
       this.isSubmit = false;
+    } 
+    else{
+      paf = true;
     }
-    else if(form.value.feild2 < 0 || form.value.feild2> 500){
+   if(form.value.feild2 < 0 || form.value.feild2> 500){
       this.haserror = false;
       this.errorform = "Tnf alpha level should be between 0 -500"
       this.isSubmit = false;
     
-    }  else if(form.value.feild3 < 0 || form.value.feild3> 1000){
+    }  else{
+      alpha= true
+    }
+    
+    
+    if(form.value.feild3 < 0 || form.value.feild3> 1000){
       this.haserror = false;
       this.errorform = "il10 level should be between 0 -1000"
       this.isSubmit = false;
     
     }
-    else if(form.value.feild4 < 0 || form.value.feild4> 500){
+    else{
+      il10 = true;
+    }
+    
+    if(form.value.feild4 < 0 || form.value.feild4> 500){
       this.haserror = false;
       this.errorform = "il-B level should be between 0 -500"
       this.isSubmit = false;
     
     }
-    else if(form.value.feild5 < 0 || form.value.feild5> 10){
+    else {
+      beta =true
+    }
+    
+    
+    if(form.value.feild5 < 0 || form.value.feild5> 10){
       this.haserror = false;
       this.errorform = "sip level should be between 0 -10"
       this.isSubmit = false;
+    }else{
+      sip = true
+    }
+
+    if(sip && alpha && beta && il10 && paf ){
+      this.haserror = true;
     }
 
     if(this.haserror){
